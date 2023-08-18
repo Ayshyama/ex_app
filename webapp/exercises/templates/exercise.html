@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <script src="{% static 'js/main.js' %}"></script>
+    <title>Exercises</title>
+</head>
+
+<body>
+
+
+<div id="exerciseContainer">
+    <button id="generateExercise">Generate Random Exercise</button>
+    <div id="exerciseDisplay"></div>
+    <button id="askForHint" style="display: none;">Get Hint</button>
+    <div id="spinner" class="spinner" style="display:none;"></div>
+
+    <div id="hintDisplay"></div>
+
+<!--    <div id="spinner1" class="spinner"></div>-->
+</div>
+
+
+
+
+
+<!--<div class="full-list">-->
+<!--    <h1>Exercises</h1>-->
+<!--    {% for table_name, exercise_list in all_exercises.items %}-->
+<!--        <details>-->
+<!--            <summary>-->
+<!--                <h2>{{ table_name }}</h2>-->
+<!--            </summary>-->
+<!--            <ol>-->
+<!--                {% for exercise in exercise_list %}-->
+<!--                    <li>{{ exercise.exercise_text }}</li>-->
+<!--                {% endfor %}-->
+<!--            </ol>-->
+<!--        </details>-->
+<!--    {% endfor %}-->
+<!--</div>-->
+
+</body>
+
+
+</html>

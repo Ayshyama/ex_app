@@ -1,0 +1,135 @@
+details {
+    margin-bottom: 10px;
+}
+
+summary {
+    display: flex;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::before {
+    content: '▶';
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+details[open] summary::before {
+    content: '▼';
+}
+
+h2 {
+    display: inline;
+    margin: 0;
+}
+
+body {
+    margin: 100px;
+}
+
+.full-list {
+    margin: 100px;
+}
+
+button {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    border: none;
+    border-radius: 0.5rex;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 16px;
+    transition: background 0.5s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(to left, #4c08a3, #1e5dbd);
+}
+
+
+#exerciseContainer {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rex;
+    box-shadow: 0 4px 12px rgba(57, 21, 97, 0.10);
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+#exerciseDisplay {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+
+}
+
+#generateExercise{
+    box-shadow: 0 4px 12px rgba(57, 21, 97, 0.4);
+}
+#askForHint {
+    z-index: 9999;
+    position: relative;
+    pointer-events: auto;
+    box-shadow: 0 4px 12px rgba(57, 21, 97, 0.4);
+}
+
+#hintDisplay {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.spinner {
+    position: relative;
+    background: blue;
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+
+    border-radius: 50%;
+    border-top: 4.5px solid #6a11cb;
+    border-bottom: 4.5px solid #2575fc;
+
+    width: 90px;
+    height: 90px;
+    animation: spin 0.8s linear infinite;
+    box-shadow: 0 0 9px rgba(41, 97, 205, 0.9);
+
+}
+
+/*.spinner::before {*/
+/*    content: "";*/
+/*    border-top: 4px solid #6a11cb;*/
+/*    border-bottom: 4px solid #2575fc;*/
+/*    position: absolute;*/
+/*    background: linear-gradient(to left, #2575fc, #6a11cb);*/
+/*    border-radius: 50%;*/
+/*    width: 40px;*/
+/*    height: 32px;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*}*/
+
+
+/*.spinner {*/
+/*    border: 4px solid rgba(255,255,255,0.3); */
+/*    border-radius: 50%;*/
+/*    border-top: 4px solid #000000; */
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*    animation: spin 1s linear infinite;*/
+/*}*/
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
