@@ -99,9 +99,9 @@ button:hover {
     border-bottom: 4.5px solid #2575fc;
 
     width: 90px;
-    height: 90px;
-    animation: spin 0.8s linear infinite;
-    box-shadow: 0 0 9px rgba(41, 97, 205, 0.9);
+    height: 88px;
+    animation: spin 0.9s linear infinite;
+    box-shadow: 0 0 15px rgba(41, 97, 205, 0.9);
 
 }
 
