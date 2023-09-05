@@ -7,6 +7,11 @@ from django.shortcuts import render
 from .models import *
 
 
+def roadmap_page(request):
+    # Your view logic here
+    return render(request, 'roadmap.html')
+
+
 def get_exercise(request):
     all_exercises = {
         'Lists': Lists.objects.all(),

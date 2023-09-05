@@ -1,0 +1,391 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/roadmap.css' %}">
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="{% static 'js/music.js' %}"></script>
+    <script src="{% static 'js/modal.js' %}"></script>
+    <title>Roadmap</title>
+</head>
+<body >
+
+
+<div id="particles-js">
+    <h1>TECH TREE EDU-APP</h1>
+</div>
+
+<div class="button-container">
+        <button class="big-button concept-button">
+            <span class="concept">
+                CONCEPT
+            </span>
+        </button>
+
+        <button class="big-button stage-button">
+            <span class="stage">
+                STAGE 1
+            </span>
+        </button>
+
+        <button class="big-button stage-button">
+            <span class="stage">
+                STAGE 2
+            </span>
+        </button>
+
+        <div style="display: none" id="youtube-player"></div>
+
+
+
+    </div>
+
+    <div id="mushroom-container">
+        <div id="button-container" style="display: none;">
+            <button class="big-button music-button" id="play-button">
+                <i class="fas fa-play" style="display: none;"> generate music</i>
+                <i class="fas fa-pause"></i>
+                <i class="fas fa-spinner fa-spin loading-spinner" style="display: none;"></i>
+            </button>
+                <label for="volume-slider"></label>
+                <input type="range" id="volume-slider" min="0" max="100" value="50" onchange="adjustVolume()">
+        </div>
+        <img src="{% static 'mushroom.png' %}" alt="Mushroom Image" id="mushroom-image" title="Enhance development productivity!">
+    </div>
+
+    {#MODAL WINDOWS#}
+    <div id="conceptModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Concept</h2>
+            <h3>Educational entertainment</h3>
+
+            <ol class="dropdown">
+                <li class="expandable">
+                    API Integration with ChatGPT for Enhanced Learning
+                    <div class="additional-text">
+                        <ul>
+                            <li>API connection with ChatGPT to offer real-time assistance and guidance to users.</li>
+                            <li>Users can ask questions related to the course material in the window with chat.</li>
+                            <li>ChatGPT should validate user solutions to coding exercises and challenges.</li>
+                            <li>It should analyze the code submitted by the user and provide feedback on correctness, efficiency, and best practices.</li>
+                            <li>If a user's solution is incorrect, ChatGPT should highlight incorrect code and make suggestions on how to improve it.</li>
+                            <li>The feedback should be constructive and educational, helping users learn from their mistakes.</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="expandable">
+                    Website/app structure
+                    <div class="additional-text">
+                        <ul>
+                            <li>Landing page.</li>
+                            <li>Course categories page.</li>
+                            <li>Course page with intro, roadmap.</li>
+                            <li>Course page 'tech-tree' modules.</li>
+                            <li>Module page with lesson and integrations.</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="expandable">
+                    Lesson Structure
+                    <div class="additional-text">
+                        <ul>
+                            <li><b>Introduction:</b> Briefly introduce the topic of the lesson and its importance.</li>
+                            <li><b>Theory:</b> Provide a concise explanation of the concept with examples.</li>
+                            <li><b>Practice:</b> Include a coding exercise or a problem related to the theory.</li>
+                            <li><b>Progressive Challenges:</b> Gradually increase the complexity of exercises.</li>
+                            <li><b>Recap:</b> Summarize the key takeaways from the lesson.</li>
+                            <li><b>Comprehensive Exercise:</b> At the end of the lesson, provide a comprehensive exercise that incorporates all the theory and practice from the lesson.</li>
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li class="expandable">
+                    Security
+                    <div class="additional-text">
+                        <ul>
+                            <li><b>API Key Security:</b> Safeguard API keys by storing them as environment variables or using Django settings for sensitive information.</li>
+                            <li>Ensure Django project settings (settings.py) are kept secure and not exposed in version control.</li>
+                            <li><b>AllAuth Security:</b> Utilize Django AllAuth's built-in security mechanisms for user authentication and registration.</li>
+                            <li>Implement HTTPS for data transmission between the client and server to protect confidential data, such as passwords.</li>
+                            <li><b>SQL Injection and Cross-Site Scripting (XSS):</b> Leverage Django's protection against SQL Injection and XSS attacks.</li>
+                            <li>Use Django's ORM and templates correctly to prevent such vulnerabilities.</li>
+                            <li>Enable automatic escaping of data passed to templates.</li>
+                            <li><b>Authentication and Authorization:</b> Configure authentication and authorization correctly in Django, including the use of @login_required decorators to restrict access to authenticated users.</li>
+                            <li><b>API Key Security:</b> Regularly update Django and related libraries to address vulnerabilities and bugs. Subscribe to Django's security mailing list to stay informed about current threats.</li>
+                            <li><b>CSRF Protection:</b> Enable Django's built-in Cross-Site Request Forgery (CSRF) protection by configuring it in settings.</li>
+                            <li><b>Input Sanitization:</b> Validate and sanitize user input to prevent malicious code injection.</li>
+                            <li> Employ Django's Object-Relational Mapping (ORM) to automatically protect against SQL injection. Avoid crafting raw SQL queries without caution.</li>
+                            <li><b>Protection Against Clickjacking:</b> Enable Clickjacking protection by configuring the X-Frame-Options header in HTTP responses.</li>
+                            <li><b>HTTPS:</b> Use HTTPS to secure data transmitted between the client and server, especially for authentication and critical operations.</li>
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li class="expandable">
+                    * Gamification
+                    <div class="additional-text">
+                        <ul>
+                            <li>Incorporate gamification elements into the lessons, such as earning points, badges, or rewards for completing exercises and lessons.</li>
+                            <li>Build gamification UI,UX elements such as characters, animations etc.</li>
+                            <li>Create a leaderboard to encourage healthy competition among users.</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="expandable">
+                    * Adaptive Learning
+                    <div class="additional-text">
+                        <ul>
+                            <li>If a user is consistently performing well, the system can introduce more challenging topics.</li>
+                            <li>Build gamification UI,UX elements such as characters, animations etc.</li>
+                            <li>If a user is struggling, the system can provide additional practice and theory on foundational concepts.</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="expandable">
+                    * Continuous Improvement
+                    <div class="additional-text">
+                        <ul>
+                            <li>Social networking.</li>
+                            <li>Cooperate with real teachers and mentors, add system to organize learning materials for them.</li>
+                            <li>Implement an adaptive learning system that tracks the user's progress and adapts the difficulty level of lessons accordingly.</li>
+                            <li>Collect user feedback on the lessons and interactions with ChatGPT to continually improve the learning experience.</li>
+                            <li>Use data analytics to identify areas where users may be facing challenges and adjust lesson generation accordingly.</li>
+                            <li>If a user is struggling, the system can provide additional practice and theory on foundational concepts.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+
+        </div>
+    </div>
+
+    <div id="stage1Modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Stage 1</h2>
+            <h3>Development roadmap</h3>
+
+            <ol class="dropdown">
+                <li class="expandable">
+                    Landing Page (Frontend)
+                    <div class="additional-text">
+                        <ul>
+                            <b>Design and Layout:</b>
+                            <li>Ensure responsive design to accommodate various screen sizes.</li>
+                            <li>* Create an attractive and user-friendly design for the landing page.</li>
+                            <b>Content:</b>
+                            <li>Craft engaging and informative content that explains the platform's purpose and features.</li>
+                            <b>* Call-to-Action (CTA):</b>
+                            <li>Include a prominent CTA button or link that encourages users to take action, such as exploring courses or registering.</li>
+                            <li>Make the CTA visually distinct.</li>
+
+                        </ul>
+                    </div>
+                </li>
+
+
+
+                <li class="expandable">
+                    Course Categories Page (Frontend)
+                    <div class="additional-text">
+                        <ul>
+                            <b>Course Listings:</b>
+                            <li>Display Python as the primary course with its brief description and prerequisites.</li>
+                            <li>Create placeholders for future planned courses.</li>
+                            <b>* Course Highlights:</b>
+                            <li>Optionally, showcase highlights of the Python course on the landing page to attract potential learners.</li>
+                        </ul>
+                    </div>
+                </li>
+
+
+
+                <li class="expandable">
+                    User Authentication and Profiles (Backend & Frontend)
+                    <div class="additional-text">
+                        <ul>
+                            <b>Authentication System (Backend):</b>
+                            <li>Implement a secure authentication system using Django AllAuth.</li>
+                            <li>Configure settings for user registration, login, and password management.</li>
+                            <b>HTTPS Implementation (Backend):</b>
+                            <li>Enable HTTPS to encrypt data transmission during user login and registration.</li>
+                            <li>Acquire and configure an SSL/TLS certificate for your domain.</li>
+                            <b>User Registration (Frontend):</b>
+                            <li>Create a user-friendly registration form on the frontend.</li>
+                            <li>Include fields for email, password, and any additional required information.</li>
+                            <li>Implement client-side validation for form input.</li>
+                            <b>User Login (Frontend):</b>
+                            <li>Develop a user login page with email and password fields.</li>
+                            <li>Implement secure authentication practices like password hashing on the backend.</li>
+                            <b>User Profiles (Backend & Frontend):</b>
+                            <li>Create a user profile model on the backend to store user-specific data.</li>
+                            <li>Develop frontend user profile pages where users can view and edit their profiles.</li>
+                            <li>Include fields for tracking progress, achievements, and rewards.</li>
+                            <li>Implement security measures to protect user data.</li>
+                            <b>Password Reset (Frontend & Backend):</b>
+                            <li>Create a password reset functionality allowing users to reset their passwords securely.</li>
+                            <li>Implement email-based password reset links.</li>
+                            <b>User Dashboard (Frontend):</b>
+                            <li>Design a user dashboard where users can access their courses, progress, and achievements.</li>
+                            <b>Session Management (Backend):</b>
+                            <li>Implement secure session management to handle user sessions and logouts.</li>
+                        </ul>
+                    </div>
+                </li>
+
+
+
+                <li class="expandable">
+                    Roadmap Page (Frontend)
+                    <div class="additional-text">
+                        <ul>
+                            <b>Visual Roadmap Design:</b>
+                            <li>Design an interactive roadmap that visually represents the learning path for each course.</li>
+                            <li>Include graphics or icons to symbolize modules and their progression.</li>
+                            <b>Module Information:</b>
+                            <li>Display each module's title, brief description, and prerequisites.</li>
+                            <li>Highlight completed modules differently to indicate user progress.</li>
+                            <b>Progress Tracking:</b>
+                            <li>Implement a progress tracker, such as a progress bar or percentage, to show users how much of the course they've completed.</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="expandable">
+                    Course Page 'Tech-Tree' Modules (Frontend and Backend)
+                    <div class="additional-text">
+                        <ul>
+                            <b>Interactive Tech-Tree Design (Frontend):</b>
+                                <li>Create an engaging and visually appealing tech tree on the frontend that represents modules covering various Python topics.</li>
+                                <li>Ensure that it serves as the central navigation element for users.</li>
+                            <b>Module Progress Tracking (Backend):</b>
+                                <li>Develop a backend system to track and store user progress within each module.</li>
+                                <li>Store information about completed modules and the user's current position in the tech tree.</li>
+                            <b>Module Progress View (Frontend):</b>
+                                <li>Create a view or modal that displays a user's progress within a module, including completed lessons and achievements.</li>
+                                <li>Enable users to resume lessons or revisit completed modules.</li>
+                            <b>Locking Mechanism (Backend):</b>
+                                <li>Implement a backend system to lock and unlock modules based on user progress and prerequisites.</li>
+                                <li>Ensure that advanced modules remain locked until prerequisites are met.</li>
+                            <b>* Gamification Elements (Backend):</b>
+                                <li>Create a backend system to manage gamification elements such as points, badges, and in-app currency.</li>
+                                <li>Define rules for awarding points and badges based on module completion and achievements.</li>
+                                <li>Design and implement an achievement system that recognizes user milestones and accomplishments.</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="expandable">
+                    Lesson Page (Frontend & Backend)
+                    <div class="additional-text">
+                        <ul>
+                            <b>Lesson Structure (Frontend):</b>
+                                <li>Develop a structured lesson page that includes the following components: intro, theory, practice, challenges, recap, comprehensive exercise.</li>
+                            <b>API Integration with ChatGPT (Backend & Frontend):</b>
+                                <li>(Backend) Establish a secure connection to ChatGPT's API to enable real-time assistance and guidance.</li>
+                                <li>(Backend) Safeguard API keys by storing them as environment variables or using Django settings for sensitive information.</li>
+                                <li>(Backend) Implement a backend system that validates user solutions to coding exercises and challenges.</li>
+                                <li>(Backend) Analyze the code submitted by the user and provide feedback on correctness, efficiency, and best practices.</li>
+                                <li>(Frontend) Create a user-friendly interface on the frontend that allows users to ask questions related to the course material.</li>
+                                <li>(Frontend) Integrate real-time chat functionality that connects to ChatGPT and displays responses in the chat window.</li>
+                                <li>(Frontend) ChatGPT highlights incorrect code and makes suggestions on how to improve it in a constructive and educational manner.</li>
+                                <li>(Backend)  </li>
+                                <li>(Backend) </li>
+                            <b>Protection Against SQL Injection and XSS (Backend):</b>
+                                <li>Leverage Django's built-in protections against SQL injection and XSS attacks.</li>
+                            <b>Clickjacking Protection (Backend):</b>
+                                <li>Enable Clickjacking protection by configuring the X-Frame-Options header in HTTP responses.</li>
+
+                            <b>Notifications (Backend & Frontend):</b>
+                                <li>(Backend) Develop a notification system on the backend to inform users about unlocked modules, achievements, or upcoming challenges.</li>
+                                <li>(Backend) Send notifications to users' profiles or dashboards.</li>
+                                <li>(Frontend) Create a frontend component that displays notifications to users in a user-friendly and unobtrusive manner.</li>
+                                <li>(Frontend) Allow users to view notifications at their convenience.</li>
+                            <b>* Gamification Elements (Backend):</b>
+                                <li>Create a backend system to manage gamification elements such as points, badges, and in-app currency.</li>
+                                <li>Define rules for awarding points and badges based on module completion and achievements.</li>
+                                <li>Design and implement an achievement system that recognizes user milestones and accomplishments.</li>
+                        </ul>
+                    </div>
+                </li>
+
+
+
+            </ol>
+
+        </div>
+    </div>
+
+    <div id="stage2Modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Stage 2</h2>
+            <h3>Future Development</h3>
+
+            <ol class="dropdown">
+                <li class="expandable">
+                    Mobile App Integration
+                    <div class="additional-text">
+                        <ul>
+                            <li>Future Development</li>
+                            <li>Future Development</li>
+                            <li>Future Development</li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+
+            <ol class="dropdown">
+                <li class="expandable">
+                    Monetization Strategy
+                    <div class="additional-text">
+                        <ul>
+                            <li>Future Development</li>
+                            <li>Future Development</li>
+                            <li>Future Development</li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+
+        </div>
+    </div>
+    {#MODAL WINDOWS#}
+
+
+
+    <script src="{% static 'js/particles.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+
+    <script>
+    const mushroomImage = document.getElementById("mushroom-image");
+    const buttonContainer = document.getElementById("button-container");
+
+    mushroomImage.addEventListener("click", function () {
+        buttonContainer.style.display = buttonContainer.style.display === "none" ? "block" : "none";
+    });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Attach a click event handler to each expandable item
+        $('.expandable').click(function () {
+          // Toggle the visibility of the additional text within this item
+          $(this).find('.additional-text').slideToggle();
+        });
+      });
+    </script>
+
+</body>
+</html>
+

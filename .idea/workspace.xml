@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="172869b3-ea75-4d97-9816-f1959fc863dc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/webapp/exercises/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/exercises/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/exercises/static/css/roadmap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/exercises/static/js/modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/exercises/static/js/music.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/exercises/templates/roadmap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/exercises/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/exercises/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/exercises/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/exercises/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/exercises/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/exercises/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -28,6 +36,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2U6WiF2CBWfn1vKm8gYx7N53ny4" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -39,7 +50,9 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/Projects/11_test_django&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/Projects/10_ex-app/webapp/exercises/static/js&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -50,10 +63,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\Projects\10_ex-app\webapp\exercises\static\js" />
       <recent name="C:\Users\user\Desktop\Projects\10_ex-app\webapp\exercises\migrations" />
       <recent name="C:\Users\user\Desktop\Projects\10_ex-app\webapp\webapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\Projects\10_ex-app\webapp\exercises\static\js" />
       <recent name="C:\Users\user\Desktop\Projects\10_ex-app" />
     </key>
   </component>
@@ -159,6 +174,14 @@
       <workItem from="1692436165112" duration="1620000" />
       <workItem from="1692728939240" duration="832000" />
       <workItem from="1692783287128" duration="601000" />
+      <workItem from="1692976653404" duration="9628000" />
+      <workItem from="1692986901488" duration="1636000" />
+      <workItem from="1693155586781" duration="1452000" />
+      <workItem from="1693208118025" duration="1885000" />
+      <workItem from="1693296992392" duration="2000" />
+      <workItem from="1693677472282" duration="5628000" />
+      <workItem from="1693814573275" duration="32716000" />
+      <workItem from="1693896840793" duration="7363000" />
     </task>
     <servers />
   </component>

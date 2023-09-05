@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     document.getElementById("askForHint").style.display = "block";
 
                     document.getElementById("generateExercise").style.display = "block";
-                }, 3000);
+                }, 1000);
             })
             .catch(error => {
                 document.getElementById("spinner").style.display = "none";
@@ -27,12 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 console.error('There was an error fetching the exercise:', error);
             });
     });
-
-
-
-
-
-
 
     function convertUrlsToAnchors(text) {
     let urlPattern = /\bhttps?:\/\/\S+/gi;
