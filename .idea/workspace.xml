@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="172869b3-ea75-4d97-9816-f1959fc863dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/webapp/exercises/static/css/roadmap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/exercises/static/js/modal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/exercises/static/js/music.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/exercises/templates/roadmap.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/exercises/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/exercises/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/exercises/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/exercises/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/exercises/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/exercises/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/exercises/templates/exercise.html" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/exercises/templates/exercise.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +175,7 @@
       <workItem from="1693296992392" duration="2000" />
       <workItem from="1693677472282" duration="5628000" />
       <workItem from="1693814573275" duration="32716000" />
-      <workItem from="1693896840793" duration="7363000" />
+      <workItem from="1693896840793" duration="9077000" />
     </task>
     <servers />
   </component>
