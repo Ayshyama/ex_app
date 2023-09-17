@@ -7,8 +7,11 @@ from django.shortcuts import render
 from .models import *
 
 
+def index_page(request):
+    return render(request, 'index.html')
+
+
 def roadmap_page(request):
-    # Your view logic here
     return render(request, 'roadmap.html')
 
 
@@ -69,7 +72,7 @@ def get_hint_from_chatgpt(request):
 
     prompt_text = f"Imagine you are Python expert and you help to teach this topic. " \
                   f"How would you provide a hint for the following Python task without revealing the full solution: '{exercise}'? " \
-                  f"Answer only with hint text starting your 'Hint: '. After hin provide a link to documentation of this topic"
+                  f"Answer only with hint text starting your 'Hint: '. After hint provide a link to documentation of this topic"
 
     data = {
         "model": "gpt-3.5-turbo-0613",
